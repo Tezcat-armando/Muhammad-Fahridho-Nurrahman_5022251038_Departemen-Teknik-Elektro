@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int num[] = {4, 8, 19, 3, 22, 11, 2, 17, 31, 10};
+    int n = 10;
+    
+    for(int i = 0; i < n-1; i++) {
+        for(int j = 0; j < n-i-1; j++) {
+            if(num[j] > num[j+1]) {
+                int a = num[j];
+                num[j] = num[j+1];
+                num[j+1] = a;
+            }
+        }
+    }
+    printf("Urutan Bilangan tersebut: ");
+    for(int i = 0; i < n; i++) {
+        printf("%d ", num[i]);
+    }
+    return 0;
+}
